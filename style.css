@@ -89,12 +89,8 @@ align-items: center;
 
 @media(max-width:480px){
 .clock-container{
-    margin-top: -90px;
+    width: 150px;
+    height: 150px;
 }
-.clock{
-    height: 327px;
-}
-.number{
-    font-size: 30px;
-}
+
 }
