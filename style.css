@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+
+.clock {
+    width: 500px;
+height: 500px;
+position: relative;
+background-color: lightgray;
+border-radius: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    
+}
+.number{
+    transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+    text-align: center;
+    inset: 20px;
+    font-size: 40px;
+}
+.number b{
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block;
+}
+.center-dot{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: gray;
+    border-radius: 50%;
+    box-shadow: 0 0 10px inset;
+
+}
+.hour-hand, .minute-hand, .second-hand {
+    --rotate:0;
+    position: absolute;
+    left: 50%;
+    bottom: 50%;
+    transform: translate(-50%) rotate(calc(var(--rotate) * 1deg));
+    transform-origin: bottom;
+    
+}
+
+.hour-hand {
+    width: 12px;
+    height: 130px;
+    background-color: black;
+}
+
+.minute-hand {
+    width: 12px;
+    height: 190px;
+    background-color: blue;
+}
+
+.second-hand {
+    width: 6px;
+    height: 210px;
+    background-color: red;
+}
+.name{
+    text-align: center;
+    bottom: 120px;
+    position: absolute;
+    font-size: 1.3rem;
+}
+/* Responsive design */
+
+/* @media only screen and (max-width: 768px) {
+    .clock-container {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .clock-container {
+        width: 150px;
+        height: 150px;
+    }
+} */
